@@ -4,7 +4,7 @@ import os
 import sys
 import dotenv
 
-def main():
+def main():    
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sr_app.settings.development')
     if os.getenv('DJANGO_SETTINGS_MODULE'):
@@ -23,5 +23,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
+dotenv.load_dotenv(
+    os.path.join(os.path.dirname(__file__), '.env')
+)
 
-dotenv.load_dotenv()

@@ -22,12 +22,12 @@ services:
     depends_on:
       db:
         condition: service_healthy
-  client:
-    build: ./sr_app_client
+  frontend:
+    build: ./sr_frontend
     command: ["npm", "start"]
     volumes:
-      - ./sr_app_client:/app/sr_app_client
-      - node-modules:/app/sr_app_client/node_modules
+      - ./sr_frontend:/app/sr_frontend
+      - node-modules:/app/sr_frontend/node_modules
     ports:
       - "3000:3000"
     networks:

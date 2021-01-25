@@ -1,5 +1,5 @@
 {
-  "name": "sr_app_client",
+  "name": "sr_frontend",
   "version": "1.0.0",
   "description": "React Frontend for the SR App",
   "main": "index.js",
