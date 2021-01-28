@@ -1,7 +1,11 @@
+from django.urls import path
 from rest_framework import routers
-from .api import ProblemViewSet
+from . import views
 
-router = routers.DefaultRouter()
-router.register('api/problems', ProblemViewSet, 'problems')
-
-urlpatterns = router.urls
+urlpatterns = [
+    path('', views.problem_list, name="problems"),
+    path('detail/<int:pk>/', views.problem_list, name="detail"),
+    path('add/', views.problem_add, name="add"),
+    path('update/<int:pk>/', views.problem_update, name="update"),
+    path('delete/<int:pk>/', views.problem_delete, name="delete")
+]
