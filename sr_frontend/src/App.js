@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios';
+import Base from './components/base'
 const App = props => {
-    // useEffect(() => {
-    //   axios.get('/api/test')
-    //     .then(res => setState(res.data))
-    // }, [])
-const [state, setState] = useState('')
-return(
-    <div>
-      <p>SR APP</p>
-    </div>
- )
-};
+
+  const [state, setState] = useState('')
+  return(
+    <Base />
+   )
+
+  };
 export default App;
