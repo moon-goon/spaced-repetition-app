@@ -10,7 +10,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        codingmoon.io
+        Codingmoon.io
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -36,24 +36,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function StickyFooter() {
+export default function Base() {
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <CssBaseline />
       <Container component="main" className={classes.main} maxWidth="sm">
         <Typography variant="h2" component="h1" gutterBottom>
-          Demo
+          Sticky footer
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
-           ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          {'Pin a footer to the bottom of the viewport.'}
+          {'The footer will move as the main element of the page grows.'}
         </Typography>
-        <Typography variant="body1">placeholder.</Typography> 
+        <Typography variant="body1">Sticky footer placeholder.</Typography>
       </Container>
       <footer className={classes.footer}>
         <Container maxWidth="sm">
-          <Typography variant="body1">Builted with Django | React </Typography>
+          <Typography variant="body1">My sticky footer can be found here.</Typography>
           <Copyright />
         </Container>
       </footer>

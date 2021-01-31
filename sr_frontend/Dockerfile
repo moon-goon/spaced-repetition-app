@@ -1,9 +1,9 @@
-FROM node:13.12.0-alpine
-WORKDIR /app/sr_frontend
+FROM node:14.4.0-alpine3.10
 
-COPY package.json ./
-RUN npm install -g gulp
-RUN npm install react-scripts@3.4.1 -g
-RUN npm install
-COPY . ./
+WORKDIR /app/sr_frontend
+COPY package.json .
+COPY package-lock.json .
+COPY . .
+RUN npm i
+RUN npm run build
 EXPOSE 3000

@@ -11,7 +11,7 @@ build
 /.changelog
 .npm/
 yarn.lock
-package-lock.json
+# package-lock.json
 .npm
 .eslintcache
 .cache

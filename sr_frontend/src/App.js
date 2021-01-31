@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import Base from './components/base'
-const App = props => {
+import React from 'react'
+import Base from './components/Base.js'
 
-  const [state, setState] = useState('')
-  return(
-    <Base />
-   )
-
-  };
-export default App;
+export default function App() {
+	return (
+		<Base />
+	)
+}
