@@ -6,8 +6,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './static'),
-    filename: 'bundle.js',
-
+    filename: '[name].js',
+    chunkFilename: '[id].[chunkhash].js'
   },
   devServer: {
     contentBase: path.join(__dirname, '/dist'),
@@ -28,6 +28,17 @@ module.exports = {
         use: 'babel-loader',
       }
     ],
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({ template: './public/index.html' }),
